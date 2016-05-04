@@ -8,10 +8,10 @@ module.exports = {
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
-    './index.js',
+    './src/index.js',
   ],
   output: {
-    path: path.join(__dirname, 'build'),
+    path: path.join(__dirname, 'public', 'build'),
     filename: 'bundle.js',
     publicPath: '/build/',
   },
@@ -33,7 +33,7 @@ module.exports = {
       {
         test: /\.otf$/,
         loaders: ['url?limit=10000&mimetype=font/opentype'],
-        include: path.join(__dirname, 'assets', 'fonts'),
+        include: path.join(__dirname, 'src', 'assets', 'fonts'),
       },
     ],
   },
