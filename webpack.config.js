@@ -1,5 +1,6 @@
 const webpack = require('webpack')
 const path = require('path')
+const sassLintPlugin = require('sasslint-webpack-plugin')
 
 module.exports = {
   devtool: 'eval',
@@ -29,6 +30,11 @@ module.exports = {
         ],
         exclude: /node_modules/,
       },
+      {
+        test: /\.otf$/,
+        loaders: ['url?limit=10000&mimetype=font/opentype'],
+        include: path.join(__dirname, 'assets', 'fonts'),
+      },
     ],
   },
   eslint: {
@@ -36,5 +42,10 @@ module.exports = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
+    new sassLintPlugin({
+      configFile: './.sass-lint.yml',
+      context: './assets/scss/',
+      quiet: false,
+    }),
   ],
 }

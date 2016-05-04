@@ -1,16 +1,22 @@
 import React from 'react'
 import Header from './Header'
 import Footer from './Footer'
-import { Link } from 'react-router'
+import Nav from './Nav'
+import styles from '../assets/scss/Root.scss'
 
 function Root({ children }) {
+  const links = [
+    { to: '/', label: 'Home' },
+    { to: '/projects', label: 'Projects' },
+    { to: '/about', label: 'About' },
+  ]
   return (
     <div>
       <Header />
-      <Link to="/">Home</Link>
-      <Link to="/projects">Projects</Link>
-      <Link to="/about">About</Link>
-      {children}
+      <Nav links={links} />
+      <div className={styles.content}>
+        {children}
+      </div>
       <Footer />
     </div>
   )
