@@ -1,0 +1,28 @@
+// colors ---------------------------------------
+$white: #fff;
+$gray: #36393e;
+$turquoise: #7dc;
+$nightshade: #4b4a53;
+$peach: #fbb7a5;
+$peach-transparent: rgba($peach, .6);
+$chalk: #d9dec3;
+$cyan: #81c7be;
+$teal: darken($cyan, 20%);
+$celery: #a8b577;
+$leaf: #7ea158;
+$gold: #e6c37e;
+$creamsicle: darken(desaturate($gold, 10%), 15%);
+$lavender: #9c8db1;
+$deep-purple: darken($lavender, 15%);
+$rose: #c77fa4;
+$fuscia: darken($rose, 10%);
+$ice: #b1d1b1;
+
+// sizing ---------------------------------------
+$font-size: 24px;
+$line-height: 1.5rem;
+$default-spacing: .75rem;
+$menu-spacing: .25rem;
+
+// misc -----------------------------------------
+$min-radius: 2px;
