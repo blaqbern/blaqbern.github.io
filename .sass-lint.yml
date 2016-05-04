@@ -1,5 +1,0 @@
-files:
-  include: './assets/scss/**/*.scss'
-  ignore: './assets/scss/vendor/**/*.*'
-rules:
-  clean-import-paths: 0
